@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -11,21 +10,20 @@
     </head>
     <body>
         <div class="todolist">
-
-            <h1 class="todolist__title">To do list</h1>
-            <label class="todolist__taskfieldlabel" for="todolist__textfield">Task :</label>
-            <input type="text" class="todolist__textfield" id="todolist__textfield">
-            <button class="todolist__addbutton">add</button>
-
-            <div class="listcontainer" id="listcontainer">         
+            <div class="todolist__inner">
+                <div class="header">
+                    <h1 class ="header__title"> To Do List</h1>
+                </div>
+                <form class="inputcontainer">
+                    <input type="text" placeholder="Add your task for today" class="taskinput">
+                    <span class="addbutton"> ADD</span>
+                </form>
+                <div class="taskbox">
+                </div>
             </div>
-            
-            <div class="todolist__footer">
-                <button class="todolist__clearbutton">Clear</button>
-            </div>
-
         </div>
-        
+
+
         <script src="script.js" defer></script>
     </body>
 </html>

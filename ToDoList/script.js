@@ -1,83 +1,84 @@
+const inputform = document.querySelector('.inputcontainer');
+const taskinput = document.querySelector('.taskinput');
+const addbutton = document.querySelector('.addbutton');
+const taskbox = document.querySelector('.taskbox')
 
-// get utility elements 
-    const todolist__textfield = document.querySelector('.todolist__textfield');
-    const todolist__addbutton = document.querySelector('.todolist__addbutton');
-    const listcontainer = document.querySelector('.listcontainer');
-    const todolist__clearbutton = document.querySelector('.todolist__clearbutton');
-    
-// Create Task Elements, Set Attribute, Set Styles, Set EventListeners, Add to UI (List)
-    function addTask() {
+inputform.addEventListener('submit', e =>{
+    e.preventDefault();
+})
 
-    if (todolist__textfield.value !== null && todolist__textfield.value !== '' ){
-                
-        const taskcontainer = document.createElement('div')
-        const taskcontainer__checkbox = document.createElement('input');
-        const taskcontainer__label = document.createElement('label');
-        const taskcontainer__delbutton = document.createElement('button');
+function createTask() {
+    const taskcontainer = document.createElement('div')
+    taskcontainer.classList.add('taskbox__element');
 
+    const checkbox = document.createElement('input')
+    checkbox.setAttribute('type', 'checkbox')
+    checkbox.classList.add('checkbox')
 
-        taskcontainer.setAttribute('class','taskcontainer')
+    const taskoutput = document.createElement('input');
+    taskoutput.classList.add('taskoutput')
+    taskoutput.setAttribute('type', 'text');
+    taskoutput.readOnly = true;
+    taskoutput.value = taskinput.value;
 
-        taskcontainer__checkbox.setAttribute('type','checkbox');
-        taskcontainer__checkbox.setAttribute('class', 'taskcontainer__checkbox');
-        taskcontainer__checkbox.setAttribute('for', 'taskcontainer__label');
-        taskcontainer__checkbox.style.zoom = '1.5';
+    const editbutton = document.createElement('span');
+    editbutton.classList.add('editbutton')
+    editbutton.textContent = 'EDIT'
 
-        taskcontainer__label.setAttribute('class', 'taskcontainer__label');
-        taskcontainer__label.textContent = todolist__textfield.value;
-        todolist__textfield.value = '';
+    const deletebutton = document.createElement('span')
+    deletebutton.classList.add('deletebutton')
+    deletebutton.textContent = 'DELETE'
 
-        taskcontainer__delbutton.setAttribute('for', 'taskcontainer__label');
-        taskcontainer__delbutton.setAttribute('class', 'taskcontainer__delbutton');
-        taskcontainer__delbutton.textContent = 'X';
-        taskcontainer__delbutton.style.padding = '0.5rem';
-
-        taskcontainer.style.display = 'flex';
-        taskcontainer.style.justifyContent = 'space-between';
-
-        
-        taskcontainer__checkbox.addEventListener('change', e => {
-        if(e.target.checked){
-            taskcontainer__label.style.textDecoration = 'line-through';
+    editbutton.addEventListener('click', () =>{
+        if (taskoutput.value !== null && taskoutput.value !== ''){
+            if (taskoutput.readOnly)
+            {
+                taskoutput.readOnly = false;
+                editbutton.textContent = 'SAVE';
+            }else if(editbutton.textContent === 'SAVE')
+            {
+            editbutton.textContent = 'EDIT'
+            taskoutput.readOnly = true;
+            }
+        } else {
+            alert('please enter a task')
         }
-        else
-        taskcontainer__label.style.textDecoration = 'none';
-        })
-
-        taskcontainer__delbutton.addEventListener('click', e => {
-            taskcontainer.remove();
-        })
 
 
-        taskcontainer.append(taskcontainer__checkbox, taskcontainer__label,taskcontainer__delbutton);
-        listcontainer.append(taskcontainer);
-    } else{
-        console.log("please enter a task");
-    }
+    })
 
+    checkbox.addEventListener('click', ()=>{
+        if (checkbox.checked == true){
+            taskoutput.style.textDecoration = 'line-through'    
+        } else{
+            taskoutput.style.textDecoration = 'none'   
+        }
+    })
+
+    deletebutton.addEventListener('click', ()=>{
+        taskcontainer.remove();
+    })
+
+    taskcontainer.append(checkbox,taskoutput,editbutton,deletebutton);
+    taskbox.append(taskcontainer);
 }
 
-// Set Event listeners and functionality to utilies
-
-todolist__addbutton.addEventListener('click', e => {
-    addTask();
-})
-
-todolist__textfield.addEventListener('keypress', e =>{
-    if (e.key === 'Enter'){
-        addTask();
-        todolist__textfield.value = ''
+taskinput.addEventListener('keypress', e =>{
+    if (taskinput.value !== null && taskinput.value !== '') {
+        if(e.key == 'Enter'){
+            createTask()
+            taskinput.value = '';
+            console.log('this is working')
+        }
     }
 })
 
-todolist__clearbutton.addEventListener('click', e => {
-    while (listcontainer.firstChild) {
-        listcontainer.removeChild(listcontainer.firstChild);
-      }
+addbutton.addEventListener('click', ()=>{
+    if (taskinput.value !== null && taskinput.value !== '') {
+        createTask()
+        taskinput.value = '';
+        console.log('this is working')
+    }
 })
 
-// prevent list overflows
-listcontainer.style.overflow = 'auto';
-// sets auto focus on the add task text field.
-todolist__textfield.focus();
 

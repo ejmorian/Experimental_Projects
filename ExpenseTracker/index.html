@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <h1 class="title">Expense Tracker</h1>
+        <div class="expenseTracker">
+            <div class="head">
+                <form class="formBox">
+                    <div class="dateBox">
+                        <label class="dateInputLabel" for="dateInput">Date:</label>
+                        <input type="date" class="dateInput">
+                    </div>
+                    <div class="descBox">
+                        <label class="descInputLabel" for="descInput">Description:</label>
+                        <input type="text" class="descInput">                      
+                    </div>
+                    <div class="priceBox">
+                        <label class="priceInputLabel" for="priceInput">Amount:</label>
+                        <input type="number" class="priceInput">
+                    </div>
+                    <button class="addButton">ADD</button>
+                </form>
+            </div>
+            <div class="body">
+                <table class="mainTable">
+                    <thead class="tableHead">
+                        <th class="dateHeading">Date</th>
+                        <th class="descHeading">Description</th>
+                        <th class="amountHeading'">Amount</th>
+                        <th class="emptyHeading"></th>
+                    </thead>
+                    <tbody class="tableBody">
+                        <tr class="expenses">
+                            <td class="expenseDate"> 09/12/2022</td>
+                            <td class="expenseDesc">Macbook Air Laptop</td>
+                            <td class="expenseAmount">1800</td>
+                            <td class="actionButton"><Button>Delete</Button></td>
+                        </tr>
+                        <tr class="expenses">
+                            <td class="expenseDate"> 09/12/2022</td>
+                            <td class="expenseDesc">Macbook Air Laptop</td>
+                            <td class="expenseAmount">1800</td>
+                            <td class="actionButton"><Button>Delete</Button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </body>
+</html>

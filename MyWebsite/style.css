@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Roboto+Condensed&display=swap');
+
+
+:root {
+  --color-one: #17252A;
+  --color-two: #2B7A78;
+  --color-three: #3AAFA9;
+  --color-four: #DEF2F1;
+  --color-five: #FEFFFF;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+body{
+  background-color: var(--color-three);
+  margin: 0;
+  padding: 0;
+}
+
+.navBar{
+  background-color: var(--color-two);
+  height: 100vh;
+  position: fixed;
+  transition: ease-in-out .2s;
+  width:5%;
+}
+
+.navigation{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.navList{
+
+  width: 100%;
+  margin: 1.5rem 1rem;
+}
+
+.navList svg{
+  width: 2.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #17252A;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navLink span{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navList:last-child{
+  margin-top: auto;
+}
+
+.navBar:hover{
+  width: 20%;
+}
+
+.navBar:hover span{
+  display: block;
+}

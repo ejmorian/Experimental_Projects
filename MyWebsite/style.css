@@ -10,7 +10,7 @@
 
 body {
   color: black;
-  background-color: rgb(23, 23, 23);
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0;
 }
@@ -76,9 +76,11 @@ main {
   color: var(--text-secondary);
 }
 
+
 .navText {
   display: none;
   margin-left: 1rem;
+  white-space: nowrap;
 }
 
 .navLink svg {
@@ -87,10 +89,40 @@ main {
   margin: 0 1.5rem;
 }
 
-.navBar:hover{
-  width: 16rem;
+
+
+
+@media only screen and (max-width: 600px) {
+  .navBar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .navText {
+    display: none;
+  }
+
+  .navMain {
+    flex-direction: row;
+  }
+
+  .navLink {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
 }
 
-.navBar:hover span {
-  display: inline;
+@media only screen and (min-width: 600px){
+
+  .navBar:hover{
+    width: 16rem;
+  }
+
+  .navBar:hover span {
+    display: inline;
+  }
 }

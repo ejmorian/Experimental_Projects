@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;500;700&display=swap');
+:root{
+    font-family: 'Merienda', cursive;
+    --murakami-color: linear-gradient( to top right,
+        #35C9C2,
+        #4DD7B7,
+        #72E3A6,
+        #9BED92,
+        #C9F47F,
+        #F9F871
+        )
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    background-image:var(--murakami-color);
+    background-size: 400%;
+    animation: bg-animate 5s infinite alternate;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+header{
+    text-align: center;
+    font-size: 1.25rem;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.101));
+}
+.main{
+    padding-bottom: 15%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.countDown{
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countDownTime{
+    align-self: flex-start;
+}
+
+
+@keyframes bg-animate{
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}

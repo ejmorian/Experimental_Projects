@@ -8,11 +8,17 @@ const toHours = toMinutes /60
 const toDays = toHours / 24
 const toWeeks = toDays / 7
 
-const weeksLeft = Math.floor(toWeeks)
+const weeksLeft = timeDifference / 604800000;
+const daysLeft = timeDifference / 86400000;
+const hoursLeft = timeDifference / 3600000;
+const minutesLeft = timeDifference / 60000;
+const secondsLeft = timeDifference / 1000;
 
-const daysLeft = (toWeeks - weeksLeft)*7;
-const hoursLeft = (daysLeft*24);
-const minutesLeft = (hoursLeft*60).toFixed(2);
-const secondsLeft = (minutesLeft*60).toFixed(2);
+const weeks = weeksLeft;
+const days = (timeDifference % 604800000)/86400000;
+const hours = ((timeDifference % 604800000)%86400000)/3600000;
+const minutes = (((timeDifference % 604800000)%86400000)%3600000)/60000;
+const seconds = ((((timeDifference % 604800000)%86400000)%3600000)%60000)/1000;
 
-console.log(minutesLeft);
+
+console.log(seconds);

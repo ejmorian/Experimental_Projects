@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+:root{
+    --gradient-primary: linear-gradient( to top right,
+    #6D31F4,
+    #006CFF,
+    #008AFF,
+    #009BFF,
+    #00A7CB,
+    #00AF89);
+
+    --gradient-secondary: linear-gradient( to top right,
+    #F43131,
+    #F6005E,
+    #E80888,
+    #C933AE,
+    #994FCB,
+    #4E62DB
+    );
+
+    --gradient-other: linear-gradient( to top right,
+    #31F465,
+    #00DF9D,
+    #00C6CF,
+    #00A9F0,
+    #0088F7,
+    #0062DE
+    );
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+    font-size: 200%;
+}
+
+html{
+    height: 100%;
+    background-color: black;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #C933AE;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: #4E62DB;
+  }
+
+.mainBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position:sticky;
+    top: -1px;
+    background-color: #F43131;
+    background-image: var(--gradient-primary);
+    z-index: 0;
+    background-size: 400%;
+    animation: moveBackground 2s infinite alternate;
+}
+
+.secondaryBackground{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E80888;
+    background-image: var(--gradient-secondary);
+    position:sticky;
+    z-index: 1;
+    top: -1px;
+    background-size: 400%;
+    animation: moveBackground 2s infinite alternate;
+}
+
+.otherBackground {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4E62DB;
+    background-image: var(--gradient-other);
+    position:sticky;
+    top: -1px;
+    z-index: 2;
+    background-size: 400%;
+    animation: moveBackground 2s infinite alternate;
+}
+
+h1{
+    color: rgba(0, 0, 0, 0.372)
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: bottom left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+}
+
+@media (max-width:420px){
+    :root{
+        font-size: 120%;
+    }
+}

@@ -2,13 +2,14 @@
 :root{
     font-family: 'Merienda', cursive;
     --murakami-color: linear-gradient( to top right,
-        #35C9C2,
-        #4DD7B7,
-        #72E3A6,
-        #9BED92,
-        #C9F47F,
-        #F9F871
+        #F43131,
+        #F6005E,
+        #E80888,
+        #C933AE,
+        #994FCB,
+        #4E62DB
         )
+        
 }
 
 html{
@@ -22,7 +23,7 @@ body {
     min-height: 100%;
     background-image:var(--murakami-color);
     background-size: 400%;
-    animation: bg-animate 5s infinite alternate;
+    animation: bg-animate 10s infinite alternate;
     overflow: hidden;
     background-repeat: no-repeat;
 }
@@ -50,15 +51,34 @@ body{
 
 .countDownTime{
     align-self: flex-start;
+    width: 100%;
+
 }
+
+.counteritem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.counteritem h3 {
+    margin: 0;
+}
+
+.counteritem span {
+    font-weight: 700;
+}
+
 
 
 @keyframes bg-animate{
     0% {
-        background-position: left;
+        background-position: bottom left;
     }
 
     100% {
-        background-position: right;
+        background-position: top right;
     }
 }

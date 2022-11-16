@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
 
+*{
+    text-decoration: none;
+}
+
 :root{
     --gradient-primary: linear-gradient( to top right,
     #6D31F4,
@@ -29,7 +33,7 @@
 
     font-family: 'Noto Sans JP', sans-serif;
 
-    font-size: 180%;
+    font-size: 125%;
 }
 
 html{
@@ -95,6 +99,7 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     display: flex;
+    animation: fadeIn 2s;
 }
 
 .navList a {
@@ -102,9 +107,6 @@ body::-webkit-scrollbar {
     color: rgba(0, 0, 0, 0.499);
 }
 
-.toggleMenu {
-
-}
 
 .secondaryBackground{
     height: 100vh;
@@ -140,6 +142,7 @@ h1{
 
 svg {
     display: block;
+    animation: fadeIn 2s;
 }
 
 
@@ -153,12 +156,17 @@ svg {
     }
 }
 
-@keyframes display {
+@keyframes fadeIn {
     0% {    opacity: 0;}
     100% {opacity: 1;}
 }
 
-@media (max-width:780px){
+@keyframes fadeOut {
+    0% {    opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@media (max-width:480px){
     :root{
         font-size: 120%;
     }
@@ -171,5 +179,7 @@ svg {
     .navList{
         display: none;
     }
+
+
 
 }

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+
+:root{
+    --gradient-primary: linear-gradient( to top right,
+    #6D31F4,
+    #006CFF,
+    #008AFF,
+    #009BFF,
+    #00A7CB,
+    #00AF89);
+
+    --gradient-secondary: linear-gradient( to top right,
+    #F43131,
+    #F6005E,
+    #E80888,
+    #C933AE,
+    #994FCB,
+    #4E62DB
+    );
+
+    --gradient-other: linear-gradient( to top right,
+    #31F465,
+    #00DF9D,
+    #00C6CF,
+    #00A9F0,
+    #0088F7,
+    #0062DE
+    );
+
+    font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+div{
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.paraList{
+    list-style: none;
+    display: flex;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    color: white;
+}
+
+

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+:root{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result{
+    width: 15rem;
+    height: 2rem;
+    margin-bottom: .2rem;
+}
+
+.buttonList{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .2rem;
+}
+
+.buttonList li {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.buttonList li:nth-child(1){
+    grid-column: 2/ span 2;
+}
+
+.equalSign {
+    grid-column: 4/5;
+    grid-row: 5/6;
+}

@@ -1,87 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 
 :root{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: linear-gradient(#19B5C9, #0AC8C3);
+    box-sizing: border-box;
+}
+.head{
+    display: flex;
+    align-items: center;
+}
+
+.logoBar{
+    margin: 0.5rem 1rem;
+    font-size: .8rem;
+}
+
+svg{
+    width: 1rem;
 }
 
 .navBar{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    align-items: center;
-    filter: grayscale(50%) opacity(.7);
-    background-color: rgba(0, 0, 0, 0.085);
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.navWrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navList{
-    gap: 1rem;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 25%;
-    padding: 0 1rem;
-    flex-grow: 1;
-}
-
-.socialIcons{
-    margin-right: auto;
     margin-left: auto;
 }
 
-.socialIcons svg{
-    margin-left: 0.5rem;
-}
-svg{
-    height: 1.5rem;
-}
+.navList{
 
-main{
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: radial-gradient(#e66465, #9198e5);
+    justify-content: flex-end;
+    margin: 0.5rem 1rem;
+    list-style: 0;
+    gap: 1rem;
+    list-style: none;
 }
 
-.mainBanner{
-    text-align: center;
-    padding: 5rem 2.5rem;
-}
-
-.mainBanner h1 {
-    filter: grayscale(50%) opacity(.7);
-    font-size: 2rem;
-    padding: 2.5rem;
-    font-weight: 700;
-}
-
-.digButton a{
-    filter: grayscale(50%) opacity(.7);
-    border: 2px solid black;
-    padding: 1rem;
-}
-
-@media (max-width:400px){
-
-    :root{
-        font-size: 0.8rem;
-    }
-}
+                

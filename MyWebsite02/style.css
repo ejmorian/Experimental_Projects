@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html{
+    background-color: black;
+}
+
 .head{
     display: flex;
     align-items: center;
@@ -38,6 +42,11 @@
     
 }
 
+.navLinks{
+    text-decoration: 0;
+    color: white;
+}
+
 .menuBar{
     display: none;
 }
@@ -47,11 +56,11 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    fill: white;
 }
 
 .socialIcons svg {
     width: 1.5rem;
+    fill: white;
 }
 
 
@@ -66,11 +75,31 @@
 
 main{
     height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 5rem 1rem;
 }
 
-section {
+.mainBanner {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
     height: 100%;
 }
+
+.mainBannerTitle{
+    font-size: 1.5rem;
+    padding: 2.5rem 0rem;
+
+}
+
+.mainBannerTitle h2{
+    animation: glow 1s ease-in-out infinite alternate;
+    
+}
+
+
 
 @keyframes bounceAnim {
     0%{
@@ -100,6 +129,15 @@ section {
         transform: translateY(0rem);
     }
 }
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0px 5px #fff, 0 0 10px #fff, 0 0 15px #d2d2d2, 0 0 20px #f0f0f0, 0 0 25px #e0e0e0, 0 0 30px #ffffff, 0 0 35px #c2c2c2;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #a5a5a5, 0 0 30px #e9e9e9, 0 0 40px #dfdfdf, 0 0 50px #dedede, 0 0 60px #dcdcdc, 0 0 70px #e8e8e8;
+    }
+  }
                 
 @media (max-width:600px){
 
@@ -108,8 +146,9 @@ section {
         height: 100vh;
         padding: 0 2.5rem;
         top: 0;
-        background-color: rgba(0, 0, 0, 0.184);
+        background-color: rgba(255, 255, 255, 0.184);
         transition: ease-out 0.5s;
+        backdrop-filter: blur(10px);
     }
     
     .navList{
@@ -132,11 +171,6 @@ section {
     .socials{
         margin-top: auto;
     }
-    .socialIcons{
-        fill: black;
-    }
-
-
     .navBar{
         right: -20rem;
     }
@@ -154,5 +188,4 @@ section {
         top: 40%;
         margin-right: 1rem;
     }
-
 }

@@ -8,10 +8,20 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
 }
 
 html{
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 .head{
@@ -145,9 +155,14 @@ html{
 }
 
 .sectionWrapper{
+    margin-top: 1rem;
     padding: 0 2.5rem;
     display: flex;
     gap: 2.5rem;
+}
+
+.sectionWrapper h2 {
+    font-size: 2rem;
 }
 
 .sectionWrapper section{
@@ -156,6 +171,32 @@ html{
     border: 5px solid white;
     border-radius: 5px;
     box-shadow: 0 0 10px white;
+}
+
+footer{
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.248);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 80vh;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    box-shadow: 0 0 10px white;
+    width: 100%;
+}
+
+.contact h2{
+    animation: glow 1s ease-in-out infinite alternate;
+    font-size: 3rem;
+    text-align: center;
 }
 
 
@@ -261,5 +302,9 @@ html{
     .sectionWrapper section {
         margin-bottom: 5rem;
 
+    }
+
+    .contactInner{
+        width: 90%;
     }
 }

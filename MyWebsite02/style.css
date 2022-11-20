@@ -74,28 +74,30 @@ html{
 }
 
 
-main{
+.main{
     background-color: black;
     color: white;
-    padding: 5rem 1rem;
 }
 
 .mainBanner {
     justify-content: center;
     display: flex;
     align-items: center;
-    text-align: center;
-    height: 90vh
 }
 
 .mainBannerTitle{
+    justify-content: center;
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
-    padding: 2.5rem 0rem;
+    text-align: center;
+    height: 100vh;
 
 }
 
 .mainBannerTitle h2{
     animation: glow 1s ease-in-out infinite alternate;
+    font-size: 3rem;
     
 }
 
@@ -103,17 +105,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
     
 }
 
 .aboutMeContent{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
     padding: 2rem 5rem;
     text-align: center;
-    height: 100vh;
 }
 
 .aboutMeContent p {
@@ -123,22 +124,38 @@ main{
 
 .portfolio{
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0rem 2.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    
 }
+
 
 .portfolioContent{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 2rem;
     padding: 2rem 5rem;
     text-align: center;
-    height: 100vh;
 }
 
 .portfolioContent p {
     text-align: center;
+}
+
+.sectionWrapper{
+    padding: 0 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.sectionWrapper section{
+    flex-grow: 1;
+    height: 80vh;
+    border: 5px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px white;
 }
 
 
@@ -180,7 +197,7 @@ main{
     }
   }
                 
-@media (max-width:600px){
+@media (max-width:800px){
 
     :root{
         font-size: 80%;
@@ -234,5 +251,15 @@ main{
         right: 1rem;
         top: 40%;
         margin-right: 1rem;
+    }
+
+    .sectionWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sectionWrapper section {
+        margin-bottom: 5rem;
+
     }
 }

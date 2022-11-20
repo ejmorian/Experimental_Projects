@@ -1,0 +1,50 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+.F {
+
+    animation: loadFromTop ease-in-out 0.5s;
+
+}
+.U{
+    animation: loadFromTop ease-in-out 1s ;
+    
+}
+.C{
+    animation: loadFromTop ease-in-out 1.5s ;
+    
+}
+.K{
+    animation: loadFromTop ease-in-out 2s ;
+    
+}
+.Y{
+    animation: loadFromTop ease-in-out 2.5s ;
+    
+}
+.O{
+    animation: loadFromTop ease-in-out 3s ;
+    
+}
+.U2{
+    animation: loadFromTop ease-in-out 3.5s ;
+    
+}
+
+@keyframes loadFromTop{
+    0% {
+        transform: translateY(-100rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

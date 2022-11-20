@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html{
@@ -74,7 +75,6 @@ html{
 
 
 main{
-    height: 100vh;
     background-color: black;
     color: white;
     padding: 5rem 1rem;
@@ -85,7 +85,7 @@ main{
     display: flex;
     align-items: center;
     text-align: center;
-    height: 100%;
+    height: 90vh
 }
 
 .mainBannerTitle{
@@ -99,6 +99,47 @@ main{
     
 }
 
+.aboutMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+
+.aboutMeContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 5rem;
+    text-align: center;
+    height: 100vh;
+}
+
+.aboutMeContent p {
+    text-align: center;
+}
+
+
+.portfolio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2.5rem;
+}
+
+.portfolioContent{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 5rem;
+    text-align: center;
+    height: 100vh;
+}
+
+.portfolioContent p {
+    text-align: center;
+}
 
 
 @keyframes bounceAnim {
@@ -131,15 +172,19 @@ main{
 }
 
 @keyframes glow {
-    from {
-      text-shadow: 0 0px 5px #fff, 0 0 10px #fff, 0 0 15px #d2d2d2, 0 0 20px #f0f0f0, 0 0 25px #e0e0e0, 0 0 30px #ffffff, 0 0 35px #c2c2c2;
+    0% {
+      text-shadow: 0 0 10px #fff
     }
-    to {
-      text-shadow: 0 0 10px #fff, 0 0 20px #a5a5a5, 0 0 30px #e9e9e9, 0 0 40px #dfdfdf, 0 0 50px #dedede, 0 0 60px #dcdcdc, 0 0 70px #e8e8e8;
+    100% {
+      text-shadow: 0px 0px 20px #a5a5a5
     }
   }
                 
 @media (max-width:600px){
+
+    :root{
+        font-size: 80%;
+    }
 
     .navBar{
         position: fixed;
@@ -148,6 +193,7 @@ main{
         top: 0;
         background-color: rgba(255, 255, 255, 0.184);
         transition: ease-out 0.5s;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
     
@@ -170,6 +216,7 @@ main{
 
     .socials{
         margin-top: auto;
+        margin-bottom: 5rem;
     }
     .navBar{
         right: -20rem;

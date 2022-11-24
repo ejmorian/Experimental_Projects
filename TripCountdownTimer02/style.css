@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.countDown{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 10%;
+}
+.timer{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.title{
+    font-size: 5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
+.timeFrame, .timeValue{
+    font-size: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+}

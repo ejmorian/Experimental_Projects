@@ -7,4 +7,8 @@ _____
 Month 1 - November
   
   Primary focus is HTML & CSS. Get a solid understanding of the static web designs.
+_____
+  
+Month 2 - December
+  Primary focus is vanilla javascript fundamentals.
 
